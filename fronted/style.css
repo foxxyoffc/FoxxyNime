@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+body {
+    background: #0f0f0f;
+    color: #fff;
+}
+.app {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 16px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+h1 {
+    font-size: 1.8rem;
+    background: linear-gradient(135deg, #ff8c00, #ff2d75);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.user-badge {
+    background: #2c2c2c;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: #ffaa44;
+}
+.tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #2c2c2c;
+    padding-bottom: 8px;
+}
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: #aaa;
+    font-size: 1rem;
+    padding: 8px 0;
+    cursor: pointer;
+    font-weight: 600;
+}
+.tab-btn.active {
+    color: #ff8c00;
+    border-bottom: 2px solid #ff8c00;
+}
+.vip-tag {
+    background: #ff2d75;
+    font-size: 0.6rem;
+    padding: 2px 6px;
+    border-radius: 20px;
+    margin-left: 6px;
+    color: white;
+}
+.content-list {
+    display: grid;
+    gap: 16px;
+}
+.card {
+    background: #1e1e1e;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.card:hover {
+    background: #2a2a2a;
+}
+.card img {
+    width: 80px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.card-info h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+.card-info p {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.modal-content {
+    background: #1a1a1a;
+    width: 95%;
+    max-width: 500px;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+.episode-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+    max-height: 150px;
+    overflow-y: auto;
+}
+.ep-btn {
+    background: #2c2c2c;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.ep-btn.locked {
+    background: #442222;
+    position: relative;
+}
+.ep-btn.locked::after {
+    content: "🔒";
+    margin-left: 4px;
+    font-size: 10px;
+}
+.hidden {
+    display: none;
+}
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #888;
+}
